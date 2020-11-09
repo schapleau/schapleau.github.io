@@ -84,7 +84,7 @@
     window.onload = function () {
 
         //Get camera video
-        navigator.mediaDevices.getUserMedia({video: {width: 1280, height: 720}, audio: false})
+        navigator.mediaDevices.getUserMedia({video: {width: 1280, height: 720, facingMode: 'environment'}, audio: false})
             .then(stream => {
                 v.srcObject = stream;
             })
